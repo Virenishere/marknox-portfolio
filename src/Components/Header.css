@@ -1,0 +1,59 @@
+/* Header.css */
+
+/* Basic styling for header links */
+.hamburger-menu {
+         position: fixed;
+         display: flex;
+         justify-content: center;
+         
+         background: rgba(255,255,255,0.30);
+         padding: 1rem;
+         
+         width: 100%;
+         z-index: 10;
+  }
+  
+ 
+  /* Hide the links and show hamburger icon for smaller screens */
+  
+  
+  .hamburger-icon {
+    display: none;
+    position: relative;
+    left: 40%;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .menu-links{
+    display: flex;
+    gap: 2rem;
+    top: 0;
+    font-weight: 700;
+  }
+  
+  /* Media query for screen widths below 768px (tablet) */
+  @media (max-width: 425px) {
+    .menu-links {
+      display: none; /* Hide menu links by default */
+      flex-direction: column;
+      gap: 1rem;
+      background: rgba(255,255,255);
+      position: absolute;
+      /* top: 5rem; */
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    .menu-links.active {
+      display: flex; /* Show menu when active */
+    }
+  
+    .hamburger-icon {
+      display: block; /* Show hamburger icon */
+      margin-right: 10px;
+      z-index: 10;
+    }
+  }
+  

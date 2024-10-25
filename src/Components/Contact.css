@@ -1,0 +1,86 @@
+.form4 {
+    width: 90%;
+    max-width: 500px; /* Maximum width for larger screens */
+    margin: 0 auto; 
+    margin-bottom: 5%;
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);    
+}
+
+.form4 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+span {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* color: #C8C2AE; */
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+}
+
+button {
+    background-color: #C8C2AE;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a8a292;
+}
+
+.form4 input[type="number"]::-webkit-inner-spin-button,
+.form4 input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+@media (max-width: 768px) {
+    span {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    input, textarea {
+        width: 100%; /* Full width on smaller screens */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text */
+    }
+}
+
+@media (max-width: 480px) {
+    span {
+        font-size: 18px; /* Even smaller font size for very small screens */
+    }
+
+    input, textarea {
+        padding: 8px; /* Less padding for smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Less padding for buttons on smaller screens */
+    }
+}

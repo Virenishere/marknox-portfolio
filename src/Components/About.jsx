@@ -1,83 +1,58 @@
-/**
- * About component
- *
- * Space for you to describe more about yourself.
- */
+import React, { useEffect } from "react";
+import image from "../images/graybackground.jpg";
+import "./About.css"
 
-import React from "react";
-
-/**
- * About background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- * Need an image? Check out https://unsplash.com to download a image you
- * freely use on your site.
- */
-import image from "../images/motion-background.jpg";
-
-const imageAltText = "purple and blue abstract background";
-
-/**
- * Sort description that expands on your title on the Home component.
- */
-const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
-
-/**
- * List of some of skills or technologies you work on, are learning,
- * passionate about, or enjoy,
- */
-const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
-];
-
-/**
- * Use this to give more information about what you are passionate about,
- * how you best work, or even a quote. This will help someone learn more
- * about you on a professional level.
- */
-const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
 
 const About = () => {
+  
+  useEffect(() => {
+    const starField = document.querySelector('.star-field');
+    const numberOfStars = 500; // Adjust the number of stars here
+
+    for (let i = 0; i < numberOfStars; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + '%'; // Random vertical position
+      star.style.left = Math.random() * 100 + '%'; // Random horizontal position
+      star.style.width = Math.random() * 2 + 'px'; // Random width between 0-2px
+      star.style.height = star.style.width; // Make it circular
+      star.style.animationDuration = Math.random() * 1.5 + 0.5 + 's'; // Random duration for twinkling
+      starField.appendChild(star);
+    }
+  }, []);
+
+
   return (
-    <section className="padding" id="about">
-      <img className="background" src={image} alt={imageAltText} />
-      <div
+    <section
+      className="padding relative star-field"
+      id="about"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      
+      <div className="boxAbout" 
         style={{
-          backgroundColor: "white",
-          width: "50%",
-          padding: "4rem",
-          margin: "3rem auto",
-          textAlign: "center",
+          
         }}
       >
         <h2>About Myself</h2>
-        <p className="large">{description}</p>
+        <p className="large">
+        
+I am a freelance MERN stack web developer with a B.Tech in Electronics and Communication from GB Pant Institute of Engineering and Technology, Uttarakhand. My background as a Technical Support Engineer sharpens my problem-solving and client communication skills, and I’m dedicated to continuous learning and delivering creative solutions.
+        </p>
         <hr />
-        <ul
-          style={{
-            textAlign: "left",
-            columns: 2,
-            fontSize: "1.25rem",
-            margin: "2rem 3rem",
-            gap: "3rem",
-          }}
-        >
-          {skillsList.map((skill) => (
+        <ul>
+          {["Web design", "User experience", "Inclusive design", "Focus group testing", "Mobile user interfaces", "Graphic design"].map((skill) => (
             <li key={skill}>{skill}</li>
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <p style={{ padding: "1rem 3rem 0" }}>
+        I thrive on finding innovative solutions to challenges. Drawing from my experience as a MERN Stack Developer and Technical Support Engineer, I strive to enhance accessibility and improve user experiences in technology.
+        </p>
       </div>
     </section>
   );

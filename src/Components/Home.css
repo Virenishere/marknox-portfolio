@@ -1,0 +1,57 @@
+/* Arrow animation */
+.arrow-icon {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer; /* Makes it clear that it's clickable */
+  animation: float 1s ease-in-out infinite alternate both;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+
+/* Responsive text styles for small screens */
+@media (max-width:425px){
+  .nameAbove{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left:12%;
+  }
+
+  .name{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-left:-3%;
+  }
+
+  .nameTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left:6%;
+  }
+}
+
+
+.aboutPage {
+    display: flex;
+    flex-direction: row; 
+    padding-top: 3rem;
+}
+
+
+
+@media (max-width:1024px){
+	.aboutPage{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+
+
