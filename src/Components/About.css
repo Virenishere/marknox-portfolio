@@ -1,4 +1,4 @@
-/* General styles */
+
 .boxAbout {
     background-color: rgba(255, 255, 234, 0.9);
     width: 50%;
@@ -17,7 +17,7 @@
     gap: 3rem;
 }
 
-/* Star field styles */
+
 .star-field {
     position: relative;
     width: 100vw;
@@ -25,7 +25,7 @@
     overflow: hidden;
 }
 
-/* Star styles */
+
 .star {
     position: absolute;
     background: rgb(0, 0, 0);
@@ -33,7 +33,7 @@
     animation: twinkle 1.5s infinite alternate;
 }
 
-/* Keyframes for twinkling effect */
+
 @keyframes twinkle {
     0%, 100% {
         opacity: 0.3;
@@ -45,7 +45,6 @@
     }
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
     .boxAbout {
         width: 70%;
@@ -101,7 +100,7 @@
 
 }
 
-/* Further adjustments for very small screens */
+
 @media (max-width: 320px) {
     .boxAbout h2 {
         font-size: 1.125rem;

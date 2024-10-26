@@ -2,7 +2,7 @@
 .arrow-icon {
   height: 3rem;
   width: 3rem;
-  cursor: pointer; /* Makes it clear that it's clickable */
+  cursor: pointer; 
   animation: float 1s ease-in-out infinite alternate both;
 }
 
@@ -15,7 +15,7 @@
   }
 }
 
-/* Responsive text styles for small screens */
+
 @media (max-width:425px){
   .nameAbove{
     font-size: 1.5rem;

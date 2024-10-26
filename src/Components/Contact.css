@@ -1,6 +1,6 @@
 .form4 {
     width: 90%;
-    max-width: 500px; /* Maximum width for larger screens */
+    max-width: 500px; 
     margin: 0 auto; 
     margin-bottom: 5%;
     padding: 20px; 
@@ -21,7 +21,7 @@ span {
     font-size: 50px;
     text-align: center;
     margin-bottom: 20px;
-    /* color: #C8C2AE; */
+
 }
 
 input, textarea {
@@ -58,29 +58,36 @@ button:hover {
 
 @media (max-width: 768px) {
     span {
-        font-size: 20px; /* Smaller font size for mobile */
+        font-size: 20px;
     }
 
     input, textarea {
-        width: 100%; /* Full width on smaller screens */
-        font-size: 14px; /* Smaller font size */
+        width: 100%; 
+        font-size: 14px; 
     }
 
     button {
-        font-size: 14px; /* Smaller button text */
+        font-size: 14px; 
     }
 }
 
 @media (max-width: 480px) {
     span {
-        font-size: 18px; /* Even smaller font size for very small screens */
+        font-size: 18px; 
     }
 
     input, textarea {
-        padding: 8px; /* Less padding for smaller screens */
+        padding: 8px; 
     }
 
     button {
-        padding: 8px; /* Less padding for buttons on smaller screens */
+        padding: 8px; 
     }
+}
+
+
+.form4 input,
+.form4 textarea,
+.form4 button {
+  cursor: pointer;
 }
