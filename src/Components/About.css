@@ -1,113 +1,79 @@
-
 .boxAbout {
-    background-color: rgba(255, 255, 234, 0.9);
-    width: 50%;
-    padding: 4rem;
-    margin: 3rem auto;
+    padding: 2rem;
     text-align: center;
-    position: relative;
+    margin: auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 234, 0.9);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 2;
-}
+  }
+  
 
-.boxAbout ul {
-    text-align: left;
+  .boxAbout h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+
+  .boxAbout p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+
+  .boxAbout ul {
+    list-style-type: disc;
     columns: 2;
-    font-size: 1.25rem;
-    margin: 2rem 3rem;
-    gap: 3rem;
-}
-
-
-.star-field {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-
-.star {
-    position: absolute;
-    background: rgb(0, 0, 0);
-    border-radius: 50%;
-    animation: twinkle 1.5s infinite alternate;
-}
-
-
-@keyframes twinkle {
-    0%, 100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-}
-
-@media (max-width: 1024px) {
+    padding-left: 2rem;
+    margin: 1rem 0;
+  }
+  
+ 
+  .boxAbout li {
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  .boxAbout hr {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+  
+ 
+  @media (max-width: 768px) {
     .boxAbout {
-        width: 70%;
-        padding: 3rem;
-        margin: 2rem auto;
+      padding: 1rem;
     }
-
-    .boxAbout ul {
-        font-size: 1.125rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .boxAbout {
-        width: 80%;
-        padding: 2.5rem;
-    }
-
+  
     .boxAbout h2 {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
-
+  
     .boxAbout p,
-    .boxAbout ul li {
-        font-size: 1rem;
+    .boxAbout li {
+      font-size: 0.95rem;
     }
-
-    .boxAbout ul {
-        columns: 2;
-        margin: 1.5rem;
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 425px) {
-    .boxAbout {
-        width: 80%;
-        padding: 2rem;
-    }
-
+  }
+  
+  @media (max-width: 480px) {
     .boxAbout h2 {
-        font-size: 1.25rem;
+      font-size: 1.25rem;
     }
-
-    .boxAbout p {
-        font-size: 0.875rem;
-    }
-
-    .boxAbout ul {
-        font-size: 0.875rem;
-        margin: 1rem;
-    }
-
-}
-
-
-@media (max-width: 320px) {
-    .boxAbout h2 {
-        font-size: 1.125rem;
-    }
-
+  
     .boxAbout p,
-    .boxAbout ul li {
-        font-size: 0.75rem;
+    .boxAbout li {
+      font-size: 0.9rem;
+      padding: 0 1rem;
     }
-}
+  
+    .boxAbout ul {
+      padding-left: 1.5rem;
+      columns: 1;
+      list-style-type: none;
+    }
+  }
+  

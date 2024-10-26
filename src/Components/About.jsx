@@ -1,30 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import image from "../images/graybackground.jpg";
 import "./About.css"
 
 
 const About = () => {
   
-  useEffect(() => {
-    const starField = document.querySelector('.star-field');
-    const numberOfStars = 500; // Adjust the number of stars here
-
-    for (let i = 0; i < numberOfStars; i++) {
-      const star = document.createElement('div');
-      star.classList.add('star');
-      star.style.top = Math.random() * 100 + '%'; // Random vertical position
-      star.style.left = Math.random() * 100 + '%'; // Random horizontal position
-      star.style.width = Math.random() * 2 + 'px'; // Random width between 0-2px
-      star.style.height = star.style.width; // Make it circular
-      star.style.animationDuration = Math.random() * 1.5 + 0.5 + 's'; // Random duration for twinkling
-      starField.appendChild(star);
-    }
-  }, []);
+  
 
 
   return (
     <section
-      className="padding relative star-field"
+      className="padding relative"
       id="about"
       style={{
         backgroundImage: `url(${image})`,
